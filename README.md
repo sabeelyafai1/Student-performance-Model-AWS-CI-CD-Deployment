@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## End to End MAchine Learning Project
 
 1. Docker Build checked
@@ -35,3 +36,6 @@ AWS_REGION = us-east-1
 AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
 ECR_REPOSITORY_NAME = simple-app
+=======
+# Student-performance-Model-AWS-CI-CD-Deployment
+>>>>>>> 6f2a5284412f2d3b65cefeff703765d0b9e8c7af
