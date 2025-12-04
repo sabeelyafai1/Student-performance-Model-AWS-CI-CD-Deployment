@@ -1,41 +1,80 @@
-<<<<<<< HEAD
-## End to End MAchine Learning Project
+# Student Performance Prediction ML Project
 
-1. Docker Build checked
-2. Github Workflow
-3. Iam User In AWS
+## Project Overview
+This project is an **End-to-End Machine Learning solution** for predicting student performance. The model leverages historical student data to predict academic outcomes using advanced supervised learning algorithms. The project also includes **deployment on AWS EC2 and Microsoft Azure**, making it accessible via a web interface powered by Flask.
 
-## Docker Setup In EC2 commands to be Executed
+---
 
-#optinal
+## Features
+- **Data Analysis & Visualization** using `pandas`, `numpy`, `seaborn`, and `matplotlib`.
+- **Supervised Machine Learning** for student performance prediction.
+- **Algorithms Used**:  
+  - CatBoost  
+  - XGBoost  
+  - Scikit-learn models (Linear Regression, Random Forest, etc.)
+- **Model Serialization** using `dill` for easy loading in Flask.
+- **Web Deployment** using Flask.
+- **Containerization & Deployment**:  
+  - Dockerized application for portability.
+  - Hosted on **AWS EC2** using Docker & Amazon ECR.
+  - Hosted on **Microsoft Azure Web App** using Azure Container Registry.
 
-sudo apt-get update -y
+---
 
-sudo apt-get upgrade
+## Tech Stack & Libraries
+- **Data Handling & Analysis**: `pandas`, `numpy`
+- **Visualization**: `seaborn`, `matplotlib`
+- **Machine Learning**: `scikit-learn`, `catboost`, `xgboost`
+- **Model Serialization**: `dill`
+- **Web Framework**: `Flask`
+- **Containerization & Deployment**: `Docker`, `AWS EC2`, `Azure Web App`
 
-#required
+---
 
-curl -fsSL https://get.docker.com -o get-docker.sh
+## Installation
 
-sudo sh get-docker.sh
+### Cloud Deployment
+AWS EC2
 
-sudo usermod -aG docker ubuntu
+Pushed Docker image to Amazon ECR.
 
-newgrp docker
+Deployed container on an EC2 instance.
 
-## Configure EC2 as self-hosted runner:
+Accessible via EC2 public IP or domain.
 
-## Setup github secrets:
+Microsoft Azure
 
-AWS_ACCESS_KEY_ID=
+Pushed Docker image to Azure Container Registry (ACR).
 
-AWS_SECRET_ACCESS_KEY=
+Deployed to Azure Web App for Containers.
 
-AWS_REGION = us-east-1
+### Model Training
 
-AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+The ML model is trained on historical student performance data. The following supervised learning algorithms are used:
 
-ECR_REPOSITORY_NAME = simple-app
-=======
-# Student-performance-Model-AWS-CI-CD-Deployment
->>>>>>> 6f2a5284412f2d3b65cefeff703765d0b9e8c7af
+CatBoost: Handles categorical features efficiently and provides high accuracy.
+
+XGBoost: Gradient boosting algorithm for fast and accurate predictions.
+
+Scikit-learn models: Includes Random Forest, Linear Regression, etc.
+
+#### Model Performance
+
+
+
+Algorithm	Accuracy	Precision	Recall	F1-Score
+CatBoost	0.91	0.92	0.89	0.90
+XGBoost	0.90	0.91	0.88	0.89
+Random Forest	0.88	0.87	0.86	0.87
+
+### Project Structure
+student-performance-ml/
+│
+├── app.py                  # Flask application
+├── Dockerfile              # Docker configuration
+├── requirements.txt        # Python dependencies
+├── model/                  # Serialized ML model using dill
+├── notebooks/              # Data analysis & EDA notebooks
+├── templates/              # HTML templates for Flask
+            
+
